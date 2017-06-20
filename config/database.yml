@@ -13,8 +13,8 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: root
+  username: railsuser
+  password: password
   socket: /tmp/mysql.sock
 
 development:
@@ -40,15 +40,10 @@ test:
 # On Heroku and other platform providers, you may have a full connection URL
 # available as an environment variable. For example:
 #
-#   DATABASE_URL="mysql2://myuser:mypass@localhost/somedatabase"
+DATABASE_URL="mysql2://b3c133c4809f4e:be9a5d69@us-cdbr-iron-east-03.cleardb.net/heroku_6ba7914f0b00e79?reconnect=true"
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
 production:
-  <<: *default
-  database: temp_production
-  username: temp
-  password: <%= ENV['TEMP_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+
