@@ -1,0 +1,25 @@
+<table border="1">
+	<tr>
+		<td><h2>Room ID</h1></td>
+		<td><h2><%= @classroom.id %></h2></td>
+	</tr>
+	<tr>
+		<td><h2>Room Name</h1></td>
+		<td><h2><%= @classroom.room_name %></h2></td>
+	</tr>
+	<tr>
+		<td><h2>Room Number</h1></td>
+		<td><h2><%= @classroom.room_number %></h2></td>
+	</tr>
+	<tr>
+		<td><h2>Floor Number</h1></td>
+		<td><h2><%= @classroom.floor_number %></h2></td>
+	</tr>
+	<tr>
+		<td><h2>Student Capacity</h1></td>
+		<td><h2><%= @classroom.student_capacity %></h2></td>
+	</tr>
+</table>
+<br/>
+<a href="/classrooms/<%= @classroom.id %>/edit">Edit</a>
+

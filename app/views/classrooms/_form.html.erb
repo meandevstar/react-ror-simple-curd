@@ -1,0 +1,7 @@
+<%= form_for @classroom do |form| %>
+  Room Number <%= form.number_field :room_number %></br>
+  Room Name <%= form.text_field :room_name %></br>
+  Floor Number <%= form.number_field :floor_number %></br>
+  Student Capacity <%= form.number_field :student_capacity %></br>
+  <%= form.submit %>
+<% end -%>

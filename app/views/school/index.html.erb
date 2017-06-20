@@ -1,0 +1,30 @@
+<h1>School Crud</h1>
+
+<table border="1">
+	<tr>
+		<td>Classroom ID</td>
+		<td>Room Number</td>
+		<td>Room Name</td>
+		<td>Capacity</td>
+		<td>Floor Number</td>
+		<td>Actions</td>
+	</tr>
+	<% @classrooms.each do |classroom| %>
+		<tr>
+			<td><%= link_to classroom.id, classroom %></td>
+			<td><%= classroom.room_number %></td>
+			<td><%= classroom.room_name %></td>
+			<td><%= classroom.student_capacity %></td>
+			<td><%= classroom.floor_number %></td>
+			<td>
+				<%= link_to "Update", edit_classroom_path(classroom.id) %>
+				 | 
+				<%= link_to "Delete", classroom, :method => 'delete' %>
+			</td>
+		</tr>
+	<% end %>
+<table>
+<br/>
+<p><%= link_to 'Add New Classroom', new_classroom_path %></p>
+
+
