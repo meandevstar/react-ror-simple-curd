@@ -46,4 +46,3 @@ DATABASE_URL="mysql2://b3c133c4809f4e:be9a5d69@us-cdbr-iron-east-03.cleardb.net/
 #
 production:
   url: <%= ENV['DATABASE_URL'] %>
-
