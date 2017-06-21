@@ -22,9 +22,7 @@
 		<% end %>
 		</td>
 		<td>
-			<%= link_to "Update", edit_classroom_path(classroom.id) %>
-			| 
-			<%= link_to "Delete", classroom, :method => 'delete' %>
+			<%= link_to "Edit", edit_classroom_path(classroom.id) %> <%= link_to "Delete", classroom, :method => 'delete' %>
 		</td>
 	</tr>
 	<% end %>

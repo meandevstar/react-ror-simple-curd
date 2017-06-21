@@ -15,9 +15,7 @@
 		<td><%= teacher.specialization %></td>
 		<td><%= teacher.classroom ? teacher.classroom.room_name : "None" %></td>
 		<td>
-			<%= link_to "Update", edit_teacher_path(teacher.id) %>
-			| 
-			<%= link_to "Delete", teacher, :method => 'delete' %>
+			<%= link_to "Edit", edit_teacher_path(teacher.id) %> <%= link_to "Delete", teacher, :method => 'delete' %>
 		</td>
 	</tr>
 	<% end %>
