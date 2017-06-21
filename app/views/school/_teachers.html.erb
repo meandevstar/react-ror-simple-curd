@@ -13,7 +13,7 @@
 		<td><%= teacher.name %></td>
 		<td><%= teacher.gender %></td>
 		<td><%= teacher.specialization %></td>
-		<td><%= teacher.classroom ? teacher.classroom.room_name : "None" %></td>
+		<td><%= link_to teacher.classroom.room_name, classroom_path(teacher.classroom.id) %></td>
 		<td>
 			<%= link_to "Edit", edit_teacher_path(teacher.id) %> <%= link_to "Delete", teacher, :method => 'delete' %>
 		</td>
