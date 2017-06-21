@@ -15,7 +15,7 @@
 		<td><%= teacher.specialization %></td>
 		<td>
 			<% if teacher.classroom %>
-				link_to teacher.classroom room_name, classroom_path(teacher.classroom.id)
+				<%= link_to teacher.classroom.room_name, classroom_path(teacher.classroom.id) %>
 			<% else %>
 				None
 			<% end %>
