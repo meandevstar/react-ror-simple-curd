@@ -4,7 +4,7 @@
   Specialization <%= form.text_field :specialization %></br></br>
   Assign a Classroom <%= form.select (:classroom_id) do %>
   	<% Classroom.all.each do |classroom| -%>
-  		<%= content_tag(:option, classroom.room_name, value: classroom.id) %>
+  		<%= content_tag(:option, classroom.room_name, value: classroom.id, selected: classroom.id == @teacher.classroom_id) %>
   	<% end %>
   <% end %>	</br></br>
   <%= form.submit %>
