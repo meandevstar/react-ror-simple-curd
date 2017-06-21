@@ -1,0 +1,26 @@
+<table border="1" cellpadding="10">
+	<tr>
+		<td>Teacher ID</td>
+		<td>Name</td>
+		<td>Gender</td>
+		<td>Specialization</td>
+		<td>Classroom</td>
+		<td>Actions</td>
+	</tr>
+	<% @teachers.each do |teacher| %>
+	<tr>
+		<td><%= link_to teacher.id, teacher %></td>
+		<td><%= teacher.name %></td>
+		<td><%= teacher.gender %></td>
+		<td><%= teacher.specialization %></td>
+		<td><%= teacher.classroom ? teacher.classroom.room_name : "None" %></td>
+		<td>
+			<%= link_to "Update", edit_teacher_path(teacher.id) %>
+			| 
+			<%= link_to "Delete", teacher, :method => 'delete' %>
+		</td>
+	</tr>
+	<% end %>
+<table>
+<br/>
+<p><%= link_to 'Add New Teacher', new_teacher_path %></p>

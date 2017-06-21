@@ -1,23 +1,33 @@
-<table border="1">
+<h2>Room: <%= @classroom.room_name %></h2>
+<br/>
+<table border="1" cellpadding="10">
 	<tr>
-		<td><h2>Room ID</h1></td>
-		<td><h2><%= @classroom.id %></h2></td>
+		<td><h5>Room ID</h1></td>
+		<td><h5><%= @classroom.id %></h5></td>
 	</tr>
 	<tr>
-		<td><h2>Room Name</h1></td>
-		<td><h2><%= @classroom.room_name %></h2></td>
+		<td><h5>Room Name</h1></td>
+		<td><h5><%= @classroom.room_name %></h5></td>
 	</tr>
 	<tr>
-		<td><h2>Room Number</h1></td>
-		<td><h2><%= @classroom.room_number %></h2></td>
+		<td><h5>Room Number</h1></td>
+		<td><h5><%= @classroom.room_number %></h5></td>
 	</tr>
 	<tr>
-		<td><h2>Floor Number</h1></td>
-		<td><h2><%= @classroom.floor_number %></h2></td>
+		<td><h5>Floor Number</h1></td>
+		<td><h5><%= @classroom.floor_number %></h5></td>
 	</tr>
 	<tr>
-		<td><h2>Student Capacity</h1></td>
-		<td><h2><%= @classroom.student_capacity %></h2></td>
+		<td><h5>Student Capacity</h1></td>
+		<td><h5><%= @classroom.student_capacity %></h5></td>
+	</tr>
+	<tr>
+		<td><h5>Teachers</h1></td>
+		<td>
+			<% @classroom.teachers.each do |teacher| -%>
+				<h5><%= link_to teacher.name, teacher_path(teacher.id) %></h5>
+			<% end %>
+		</td>
 	</tr>
 </table>
 <br/>

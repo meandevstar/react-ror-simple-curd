@@ -1,0 +1,11 @@
+<%= form_for @teacher do |form| %>
+  Teacher Name <%= form.text_field :name %></br>
+  Gender <%= form.text_field :gender %></br>
+  Specialization <%= form.text_field :specialization %></br></br>
+  Assign a Classroom <%= form.select (:classroom_id) do %>
+  	<% Classroom.all.each do |classroom| -%>
+  		<%= content_tag(:option, classroom.room_name, value: classroom.id) %>
+  	<% end %>
+  <% end %>	</br></br>
+  <%= form.submit %>
+<% end -%>

@@ -2,6 +2,7 @@ class SchoolController < ApplicationController
 
 	def index 
 		@classrooms = Classroom.all
+		@teachers = Teacher.all
 	end
 
 	def add

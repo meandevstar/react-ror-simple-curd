@@ -1,0 +1,27 @@
+<h2>Teacher: <%= @teacher.name %></h2>
+<br/>
+<table border="1" cellpadding="10">
+	<tr>
+		<td><h5>Teacher ID</h1></td>
+		<td><h5><%= @teacher.id %></h5></td>
+	</tr>
+	<tr>
+		<td><h5>Name</h1></td>
+		<td><h5><%= @teacher.name %></h5></td>
+	</tr>
+	<tr>
+		<td><h5>Specialization</h1></td>
+		<td><h5><%= @teacher.specialization %></h5></td>
+	</tr>
+	<tr>
+		<td><h5>Gender</h1></td>
+		<td><h5><%= @teacher.gender %></h5></td>
+	</tr>
+	<tr>
+		<td><h5>Classroom</h1></td>
+		<td><h5><%= link_to @teacher.classroom.room_name, classroom_path(@teacher.classroom.id) %></h5></td>
+	</tr>
+</table>
+<br/>
+<a href="/teachers/<%= @teacher.id %>/edit">Edit</a>
+
