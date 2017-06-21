@@ -15,7 +15,7 @@
 		<td><%= classroom.room_name %></td>
 		<td><%= classroom.student_capacity %></td>
 		<td><%= classroom.floor_number %></td>
-		<td>
+		<td width="22%">
 		<% classroom.teachers.each do |teacher| -%>
 			<%= link_to teacher.name, teacher_path(teacher.id) %>
 			<br/>
